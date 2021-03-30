@@ -6,10 +6,18 @@
             "id": "4fbf944c-49c5-40f7-8176-ddb5c4123064",
             "actions": [
                 {
-                    "name": "nextPage",
-                    "type": "PassThrough",
+                    "name": "NextPage",
+                    "type": "Button",
                     "id": "fdbed2a4-3fcb-44aa-af51-8da7578e56ae",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "BackPage",
+                    "type": "Button",
+                    "id": "4a8d8ae4-ee13-4262-9e08-ff3eaf744073",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -17,12 +25,23 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "14d4ed72-8213-45db-9e35-7a395d042bb9",
-                    "path": "<Touchscreen>/primaryTouch",
+                    "id": "e6a70349-04fe-493f-ae49-b2af4a2caad2",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Touch",
-                    "action": "nextPage",
+                    "groups": "",
+                    "action": "NextPage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c71a3f28-e7b8-4e62-82fd-e31108fcaf5a",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BackPage",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

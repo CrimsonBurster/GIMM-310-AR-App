@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.OnScreen;
-using UnityEngine.InputSystem.EnhancedTouch;
-using UnityEngine.InputSystem.Controls;
 
 public class next_backButtonManager : MonoBehaviour
 {
-    public int pageCount = 0;
+    [Range(0, 3)]public int pageCount = 0;
 
     public GameObject intro, plantGrow, waterLight, soil, progressCheck;
 
-    
+    private bool nextPage, backPage;
 
   
 
@@ -22,52 +19,84 @@ public class next_backButtonManager : MonoBehaviour
         intro.SetActive(true);
 
 
-        TouchSimulation.Enable();
 
     }
 
 
     void Update()
     {
-        
+        if (pageCount == 0)
+        {
+            intro.SetActive(true);
+        }
+
+        else
+        {
+            intro.SetActive(false);
+
+        }
+
+        if (pageCount == 1)
+        {
+            plantGrow.SetActive(true);
+        }
+
+        else
+        {
+            plantGrow.SetActive(false);
+
+        }
+
+        if (pageCount == 2)
+        {
+            waterLight.SetActive(true);
+        }
+        else
+        {
+            waterLight.SetActive(false);
+
+        }
+
+        if (pageCount == 3)
+        {
+            soil.SetActive(true);
+        }
+        else
+        {
+            soil.SetActive(false);
+        }
     }
 
     public void FixedUpdate()
     {
-        if(pageCount == 0)
-        {
-            intro.SetActive(true);
-        }
-        else if(pageCount == 1)
-        {
-            plantGrow.SetActive(true);
-        }
-        else if(pageCount == 2)
-        {
-            waterLight.SetActive(true);
-        }
-        else if(pageCount == 3)
-        {
-            soil.SetActive(true);
-        }
-    }
-
-    public void nextPage(InputAction.CallbackContext context)
-    {
-        if (context.performed)
+        if (nextPage && pageCount < 3)
         {
             pageCount += 1;
             Debug.Log(pageCount);
+            nextPage = (false);
         }
-    }
 
-    public void backPage(InputAction.CallbackContext context)
-    {
-        if (context.performed)
+        if (backPage && pageCount > 0)
         {
             pageCount -= 1;
             Debug.Log(pageCount);
+            backPage = (false);
         }
+    }
+
+    public void OnNextPage(InputValue inputValue)
+    {
+
+        nextPage = inputValue.isPressed;
+        //pageCount += 1;
+        //Debug.Log(pageCount);
+    }
+
+    public void OnBackPage(InputValue inputValue)
+    {
+        backPage = inputValue.isPressed;
+        //pageCount -= 1;
+        //Debug.Log(pageCount);
     }
 
 }
