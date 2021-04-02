@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/touchScreenInputActions.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/mainLessonScripts/touchScreenInputActions.inputactions'
 
 using System;
 using System.Collections;
