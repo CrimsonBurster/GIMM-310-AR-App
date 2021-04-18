@@ -3,33 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class inputManager : MonoBehaviour
 {
-    public GameObject target, pollen, seed, water, sun;
+    public GameObject pollen, seed, water, sun, wrongMsg;
 
-    public Button pollenBtn, seedBtn, waterBtn, sunBtn;
+    public Button pollenBtn, seedBtn, waterBtn, sunBtn, clearBtn, quizBtn;
 
     private Vector3 pollenSpwn, seedSpwn, waterSpwn, sunSpwn, pointSpwn;
 
-    private bool pollenHit, seedHit, waterHit, sunHit;
+    private bool pollenHit, seedHit, waterHit, sunHit, clear, toQuiz;
 
     public GameObject spawnPoint;
 
+
     public void Start()
     {
-        pollenSpwn = pollenBtn.transform.position;
-        seedSpwn = seedBtn.transform.position;
-        waterSpwn = waterBtn.transform.position;
-        sunSpwn = sunBtn.transform.position;
         pointSpwn = spawnPoint.transform.position;
     }
     private void Update()
     {
-        //if(GameObject.Find("pollenTest"))
-        //{
-        //    pollen.transform.position = Vector3.Slerp(this.transform.position, target.transform.position, tossSpeed);
-        //}
+
     }
 
     public void FixedUpdate()
@@ -58,6 +53,21 @@ public class inputManager : MonoBehaviour
             sunHit = (false);
         }
 
+        if (clear)
+        {
+            pollenBtn.gameObject.SetActive(true);
+            seedBtn.gameObject.SetActive(true);
+            waterBtn.gameObject.SetActive(true);
+            sunBtn.gameObject.SetActive(true);
+            wrongMsg.gameObject.SetActive(false);
+            clear = (false);
+        }
+
+        if (toQuiz)
+        {
+            SceneManager.LoadScene("Quiz");
+        }
+
     }
 
     public void OnPollenButton(InputValue inputValue)
@@ -80,9 +90,13 @@ public class inputManager : MonoBehaviour
         sunHit = inputValue.isPressed;
     }
 
-    //public void SummonPollen()
-    //{
-    //    Instantiate(pollen, pointSpwn, Quaternion.identity);
-    //}
+    public void OnWrongClear(InputValue inputValue)
+    {
+        clear = inputValue.isPressed;
+    }
 
+    public void OnMoveToQuiz(InputValue inputValue)
+    {
+        toQuiz = inputValue.isPressed;
+    }
 }

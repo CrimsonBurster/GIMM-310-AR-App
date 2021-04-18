@@ -36,6 +36,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "wrongClear",
+                    "type": "Button",
+                    "id": "d5787787-74f1-431f-a906-eac27e74c30b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "moveToQuiz",
+                    "type": "Button",
+                    "id": "53058471-8b1b-4b16-acf4-0fcccf134722",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -80,6 +96,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "sunButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5d531915-d1d1-4d6f-b8f3-e502f60e7cac",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "wrongClear",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "50a35ab8-5b74-4eb0-9dd8-8c10044b4e8a",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "moveToQuiz",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

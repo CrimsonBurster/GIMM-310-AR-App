@@ -49,6 +49,22 @@ public class @ArSectionInputs : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""wrongClear"",
+                    ""type"": ""Button"",
+                    ""id"": ""d5787787-74f1-431f-a906-eac27e74c30b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""moveToQuiz"",
+                    ""type"": ""Button"",
+                    ""id"": ""53058471-8b1b-4b16-acf4-0fcccf134722"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -93,6 +109,28 @@ public class @ArSectionInputs : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""sunButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5d531915-d1d1-4d6f-b8f3-e502f60e7cac"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""wrongClear"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""50a35ab8-5b74-4eb0-9dd8-8c10044b4e8a"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""moveToQuiz"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -168,6 +206,8 @@ public class @ArSectionInputs : IInputActionCollection, IDisposable
         m_Player_waterButton = m_Player.FindAction("waterButton", throwIfNotFound: true);
         m_Player_seedButton = m_Player.FindAction("seedButton", throwIfNotFound: true);
         m_Player_sunButton = m_Player.FindAction("sunButton", throwIfNotFound: true);
+        m_Player_wrongClear = m_Player.FindAction("wrongClear", throwIfNotFound: true);
+        m_Player_moveToQuiz = m_Player.FindAction("moveToQuiz", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -221,6 +261,8 @@ public class @ArSectionInputs : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_waterButton;
     private readonly InputAction m_Player_seedButton;
     private readonly InputAction m_Player_sunButton;
+    private readonly InputAction m_Player_wrongClear;
+    private readonly InputAction m_Player_moveToQuiz;
     public struct PlayerActions
     {
         private @ArSectionInputs m_Wrapper;
@@ -229,6 +271,8 @@ public class @ArSectionInputs : IInputActionCollection, IDisposable
         public InputAction @waterButton => m_Wrapper.m_Player_waterButton;
         public InputAction @seedButton => m_Wrapper.m_Player_seedButton;
         public InputAction @sunButton => m_Wrapper.m_Player_sunButton;
+        public InputAction @wrongClear => m_Wrapper.m_Player_wrongClear;
+        public InputAction @moveToQuiz => m_Wrapper.m_Player_moveToQuiz;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -250,6 +294,12 @@ public class @ArSectionInputs : IInputActionCollection, IDisposable
                 @sunButton.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSunButton;
                 @sunButton.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSunButton;
                 @sunButton.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSunButton;
+                @wrongClear.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWrongClear;
+                @wrongClear.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWrongClear;
+                @wrongClear.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWrongClear;
+                @moveToQuiz.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveToQuiz;
+                @moveToQuiz.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveToQuiz;
+                @moveToQuiz.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveToQuiz;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -266,6 +316,12 @@ public class @ArSectionInputs : IInputActionCollection, IDisposable
                 @sunButton.started += instance.OnSunButton;
                 @sunButton.performed += instance.OnSunButton;
                 @sunButton.canceled += instance.OnSunButton;
+                @wrongClear.started += instance.OnWrongClear;
+                @wrongClear.performed += instance.OnWrongClear;
+                @wrongClear.canceled += instance.OnWrongClear;
+                @moveToQuiz.started += instance.OnMoveToQuiz;
+                @moveToQuiz.performed += instance.OnMoveToQuiz;
+                @moveToQuiz.canceled += instance.OnMoveToQuiz;
             }
         }
     }
@@ -321,5 +377,7 @@ public class @ArSectionInputs : IInputActionCollection, IDisposable
         void OnWaterButton(InputAction.CallbackContext context);
         void OnSeedButton(InputAction.CallbackContext context);
         void OnSunButton(InputAction.CallbackContext context);
+        void OnWrongClear(InputAction.CallbackContext context);
+        void OnMoveToQuiz(InputAction.CallbackContext context);
     }
 }
