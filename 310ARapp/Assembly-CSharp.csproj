@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\mainLessonScripts\next_backButtonManager.cs" />
     <Compile Include="Assets\Scripts\arScripts\plantObjectMoves.cs" />
     <Compile Include="Assets\Scripts\arScripts\plantTransformer.cs" />
+    <Compile Include="Assets\Scripts\arScripts\textFadeOut.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

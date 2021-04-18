@@ -1,44 +1,115 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class plantTransformer : MonoBehaviour
 {
-    public GameObject phase1, phase2, phase3;
+    public GameObject dirtPhase, seedPhase, pollenPhase, waterPhase, sunPhase;
 
-    public float plantCount;
+    public float plantCount, numFinishedPlants, totalPlantCount;
+
+    public Text goodMsg;
+
+    public GameObject wrongMsg, lessonComplete;
+
+    public Button pollenBtn, seedBtn, waterBtn, sunBtn;
+
 
     void Start()
     {
-        plantCount = 1;
+        plantCount = 0;
+        numFinishedPlants = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        if(plantCount == 1)
+        
+    }
+
+    void FixedUpdate()
+    {
+        if (plantCount == 0)
         {
-            phase1.SetActive(true);
-            phase2.SetActive(false);
-            phase3.SetActive(false);
+            dirtPhase.SetActive(true);
+            seedPhase.SetActive(false);
+            pollenPhase.SetActive(false);
+            waterPhase.SetActive(false);
+            sunPhase.SetActive(false);
         }
-        else if(plantCount == 2)
+        else if (plantCount == 1)
         {
-            phase1.SetActive(false);
-            phase2.SetActive(true);
-            phase3.SetActive(false);
+            dirtPhase.SetActive(false);
+            seedPhase.SetActive(true);
+            pollenPhase.SetActive(false);
+            waterPhase.SetActive(false);
+            sunPhase.SetActive(false);
+        }
+        else if (plantCount == 2)
+        {
+            dirtPhase.SetActive(false);
+            seedPhase.SetActive(false);
+            pollenPhase.SetActive(true);
+            waterPhase.SetActive(false);
+            sunPhase.SetActive(false);
         }
         else if (plantCount == 3)
         {
-            phase1.SetActive(false);
-            phase2.SetActive(false);
-            phase3.SetActive(true);
+            dirtPhase.SetActive(false);
+            seedPhase.SetActive(false);
+            pollenPhase.SetActive(false);
+            waterPhase.SetActive(true);
+            sunPhase.SetActive(false);
         }
+        else if (plantCount == 4)
+        {
+            dirtPhase.SetActive(false);
+            seedPhase.SetActive(false);
+            pollenPhase.SetActive(false);
+            waterPhase.SetActive(false);
+            sunPhase.SetActive(true);
+            numFinishedPlants += 1;
+
+            if (numFinishedPlants >= totalPlantCount)
+            {
+                lessonComplete.gameObject.SetActive(true);
+
+                pollenBtn.gameObject.SetActive(false);
+                seedBtn.gameObject.SetActive(false);
+                waterBtn.gameObject.SetActive(false);
+                sunBtn.gameObject.SetActive(false);
+
+                numFinishedPlants = totalPlantCount;
+            }
+
+            else
+            {
+                plantCount = 0;
+            }
+        }
+        
+        
     }
 
     public void PlantCountCollision(float collObjectValue)
     {
-        plantCount = collObjectValue;
-        Debug.Log(plantCount);
+        if(collObjectValue == plantCount + 1)
+        {
+            plantCount = collObjectValue;
+
+            goodMsg.gameObject.SetActive(true);
+        }
+        else
+        {
+            plantCount = 0;
+            wrongMsg.gameObject.SetActive(true);
+
+            pollenBtn.gameObject.SetActive(false);
+            seedBtn.gameObject.SetActive(false);
+            waterBtn.gameObject.SetActive(false);
+            sunBtn.gameObject.SetActive(false);
+            Debug.Log("incorrect step");
+        }
+        
     }
 }

@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tossSpeed: 10
   target: {fileID: 5826320159938440157, guid: b4f909987e104f94f930d1bef17e6500, type: 3}
-  interactionValue: 1
+  interactionValue: 3
 --- !u!33 &5441400136371629482
 MeshFilter:
   m_ObjectHideFlags: 0
