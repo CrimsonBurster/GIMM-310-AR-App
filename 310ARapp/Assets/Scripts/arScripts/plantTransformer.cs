@@ -9,7 +9,7 @@ public class plantTransformer : MonoBehaviour
 
     public float plantCount, numFinishedPlants, totalPlantCount;
 
-    public Text goodMsg;
+    public Text goodMsg, seedMsg, pollenMsg, waterMsg, sunMsg;
 
     public GameObject wrongMsg, lessonComplete;
 
@@ -36,6 +36,11 @@ public class plantTransformer : MonoBehaviour
             pollenPhase.SetActive(false);
             waterPhase.SetActive(false);
             sunPhase.SetActive(false);
+
+            seedMsg.gameObject.SetActive(true);
+            pollenMsg.gameObject.SetActive(false);
+            waterMsg.gameObject.SetActive(false);
+            sunMsg.gameObject.SetActive(false);
         }
         else if (plantCount == 1)
         {
@@ -44,6 +49,11 @@ public class plantTransformer : MonoBehaviour
             pollenPhase.SetActive(false);
             waterPhase.SetActive(false);
             sunPhase.SetActive(false);
+
+            seedMsg.gameObject.SetActive(false);
+            pollenMsg.gameObject.SetActive(true);
+            waterMsg.gameObject.SetActive(false);
+            sunMsg.gameObject.SetActive(false);
         }
         else if (plantCount == 2)
         {
@@ -52,6 +62,11 @@ public class plantTransformer : MonoBehaviour
             pollenPhase.SetActive(true);
             waterPhase.SetActive(false);
             sunPhase.SetActive(false);
+
+            seedMsg.gameObject.SetActive(false);
+            pollenMsg.gameObject.SetActive(false);
+            waterMsg.gameObject.SetActive(true);
+            sunMsg.gameObject.SetActive(false);
         }
         else if (plantCount == 3)
         {
@@ -60,6 +75,11 @@ public class plantTransformer : MonoBehaviour
             pollenPhase.SetActive(false);
             waterPhase.SetActive(true);
             sunPhase.SetActive(false);
+
+            seedMsg.gameObject.SetActive(false);
+            pollenMsg.gameObject.SetActive(false);
+            waterMsg.gameObject.SetActive(false);
+            sunMsg.gameObject.SetActive(true);
         }
         else if (plantCount == 4)
         {
@@ -68,6 +88,9 @@ public class plantTransformer : MonoBehaviour
             pollenPhase.SetActive(false);
             waterPhase.SetActive(false);
             sunPhase.SetActive(true);
+
+            sunMsg.gameObject.SetActive(false);
+
             numFinishedPlants += 1;
 
             if (numFinishedPlants >= totalPlantCount)
