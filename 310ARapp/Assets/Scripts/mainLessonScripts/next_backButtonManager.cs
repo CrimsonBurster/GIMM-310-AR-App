@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class next_backButtonManager : MonoBehaviour
 {
@@ -80,6 +80,12 @@ public class next_backButtonManager : MonoBehaviour
             Debug.Log(pageCount);
             backPage = (false);
             glossary.SetActive(false);
+        }
+
+        //go to ar
+        if(nextPage && pageCount == 3)
+        {
+            SceneManager.LoadScene("arSequence");
         }
 
         if (openCloseGlossary)
