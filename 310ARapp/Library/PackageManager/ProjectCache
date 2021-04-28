@@ -5,15 +5,15 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637551616025052988
-    m_Hash: 3347806117
+      ticks: 637551625108180279
+    m_Hash: 293874166
   m_LockFileStatus:
     m_FilePath: C:/Users/wingl/Documents/GitHub/GIMM-310-AR-App/310ARapp/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637551616034897657
+      ticks: 637551671104758138
     m_Hash: 3587019023
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
