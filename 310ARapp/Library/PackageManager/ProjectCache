@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637552304103080322
+      ticks: 637552313561086850
     m_Hash: 942291321
   m_LockFileStatus:
     m_FilePath: C:/Users/coolk/Documents/GitHub/GIMM-310-AR-App/310ARapp/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637552304643965511
+      ticks: 637552313831980243
     m_Hash: 2281071379
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}

@@ -52,10 +52,10 @@
      <Compile Include="Assets\Scripts\mainLessonScripts\GlossaryTermCheck.cs" />
      <Compile Include="Assets\Scripts\mainLessonScripts\touchScreenInputActions.cs" />
      <Compile Include="Assets\Scripts\arScripts\inputManager.cs" />
+     <Compile Include="Assets\Scripts\quizScripts\Quiz.cs" />
      <Compile Include="Assets\Scripts\mainLessonScripts\next_backButtonManager.cs" />
      <Compile Include="Assets\Scripts\arScripts\plantObjectMoves.cs" />
      <Compile Include="Assets\Scripts\arScripts\plantTransformer.cs" />
-     <Compile Include="Assets\Scripts\quizScripts\Quiz.cs" />
  <Reference Include="UnityEngine">
  <HintPath>D:/2020.3.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
