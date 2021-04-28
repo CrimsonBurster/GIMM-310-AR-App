@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class Quiz : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Quiz : MonoBehaviour
     private int answer;
 
     System.Random random = new System.Random();
+
+    bool submitBtn;
 
     void Start()
     {
@@ -124,5 +127,20 @@ public class Quiz : MonoBehaviour
         answer = random.Next(5) + 1;
         Debug.Log(answer);
         test.text = "Mmm, that wasn't correct. Try to select Option " + answer + " and then hit Submit.";
+    }
+
+    public void FixedUpdate()
+    {
+        if (submitBtn == true)
+        {
+            onSubmit();
+            
+            submitBtn = (false);
+        }
+    }
+
+    public void OnSubmitButton(InputValue value)
+    {
+        submitBtn = value.isPressed;
     }
 }
