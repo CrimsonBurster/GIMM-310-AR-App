@@ -55,7 +55,10 @@
      <Compile Include="Assets\Scripts\quizScripts\Quiz.cs" />
      <Compile Include="Assets\Scripts\mainLessonScripts\next_backButtonManager.cs" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
      <Compile Include="Assets\Scripts\mainLessonScripts\menuPanelMovement.cs" />
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
      <Compile Include="Assets\Scripts\arScripts\plantObjectMoves.cs" />
