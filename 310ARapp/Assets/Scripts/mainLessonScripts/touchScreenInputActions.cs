@@ -41,13 +41,53 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""PopOutMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""392b743f-e5ee-40da-b55c-46674947632d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ClosePopOut"",
+                    ""type"": ""Button"",
+                    ""id"": ""c0e98fca-1255-4b14-bd2c-42def1f4021c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""GoToLessonOne"",
+                    ""type"": ""Button"",
+                    ""id"": ""a7dc4104-7170-423b-b7b9-6e3df32a3282"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""GoToLessonTwo"",
+                    ""type"": ""Button"",
+                    ""id"": ""c7a7ac42-aa45-4198-804e-a73ea920af63"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""GoToConceptMap"",
+                    ""type"": ""Button"",
+                    ""id"": ""6415106c-22aa-4f5a-af0a-0e58a1cde513"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""e6a70349-04fe-493f-ae49-b2af4a2caad2"",
-                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""path"": ""<Touchscreen>/primaryTouch/tap"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -58,7 +98,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""c71a3f28-e7b8-4e62-82fd-e31108fcaf5a"",
-                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""path"": ""<Touchscreen>/touch2/tap"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -69,11 +109,66 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""93def623-d147-490e-8a28-cc8529bfde80"",
-                    ""path"": ""<Keyboard>/upArrow"",
+                    ""path"": ""<Touchscreen>/touch3/tap"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""GlossaryOpenClose"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9ca11137-2563-4f41-a9e4-dd4e01410647"",
+                    ""path"": ""<Touchscreen>/touch4/tap"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PopOutMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5833c23e-fbb9-4bb5-91a9-04a8244f5405"",
+                    ""path"": ""<Touchscreen>/touch5/tap"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ClosePopOut"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4a5d8b49-e372-45a7-aed5-b5d57b7d7812"",
+                    ""path"": ""<Touchscreen>/touch6/tap"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GoToLessonOne"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a24aca96-46db-4ab1-ab79-6b0452cc9673"",
+                    ""path"": ""<Touchscreen>/touch7/tap"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GoToLessonTwo"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""90edbb45-3a2a-44f4-a563-3eaaa9c42de5"",
+                    ""path"": ""<Touchscreen>/touch8/tap"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GoToConceptMap"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -148,6 +243,11 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
         m_Touch_NextPage = m_Touch.FindAction("NextPage", throwIfNotFound: true);
         m_Touch_BackPage = m_Touch.FindAction("BackPage", throwIfNotFound: true);
         m_Touch_GlossaryOpenClose = m_Touch.FindAction("GlossaryOpenClose", throwIfNotFound: true);
+        m_Touch_PopOutMenu = m_Touch.FindAction("PopOutMenu", throwIfNotFound: true);
+        m_Touch_ClosePopOut = m_Touch.FindAction("ClosePopOut", throwIfNotFound: true);
+        m_Touch_GoToLessonOne = m_Touch.FindAction("GoToLessonOne", throwIfNotFound: true);
+        m_Touch_GoToLessonTwo = m_Touch.FindAction("GoToLessonTwo", throwIfNotFound: true);
+        m_Touch_GoToConceptMap = m_Touch.FindAction("GoToConceptMap", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -200,6 +300,11 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Touch_NextPage;
     private readonly InputAction m_Touch_BackPage;
     private readonly InputAction m_Touch_GlossaryOpenClose;
+    private readonly InputAction m_Touch_PopOutMenu;
+    private readonly InputAction m_Touch_ClosePopOut;
+    private readonly InputAction m_Touch_GoToLessonOne;
+    private readonly InputAction m_Touch_GoToLessonTwo;
+    private readonly InputAction m_Touch_GoToConceptMap;
     public struct TouchActions
     {
         private @TouchScreenInputActions m_Wrapper;
@@ -207,6 +312,11 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
         public InputAction @NextPage => m_Wrapper.m_Touch_NextPage;
         public InputAction @BackPage => m_Wrapper.m_Touch_BackPage;
         public InputAction @GlossaryOpenClose => m_Wrapper.m_Touch_GlossaryOpenClose;
+        public InputAction @PopOutMenu => m_Wrapper.m_Touch_PopOutMenu;
+        public InputAction @ClosePopOut => m_Wrapper.m_Touch_ClosePopOut;
+        public InputAction @GoToLessonOne => m_Wrapper.m_Touch_GoToLessonOne;
+        public InputAction @GoToLessonTwo => m_Wrapper.m_Touch_GoToLessonTwo;
+        public InputAction @GoToConceptMap => m_Wrapper.m_Touch_GoToConceptMap;
         public InputActionMap Get() { return m_Wrapper.m_Touch; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -225,6 +335,21 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 @GlossaryOpenClose.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnGlossaryOpenClose;
                 @GlossaryOpenClose.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnGlossaryOpenClose;
                 @GlossaryOpenClose.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnGlossaryOpenClose;
+                @PopOutMenu.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnPopOutMenu;
+                @PopOutMenu.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnPopOutMenu;
+                @PopOutMenu.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnPopOutMenu;
+                @ClosePopOut.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnClosePopOut;
+                @ClosePopOut.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnClosePopOut;
+                @ClosePopOut.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnClosePopOut;
+                @GoToLessonOne.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnGoToLessonOne;
+                @GoToLessonOne.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnGoToLessonOne;
+                @GoToLessonOne.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnGoToLessonOne;
+                @GoToLessonTwo.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnGoToLessonTwo;
+                @GoToLessonTwo.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnGoToLessonTwo;
+                @GoToLessonTwo.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnGoToLessonTwo;
+                @GoToConceptMap.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnGoToConceptMap;
+                @GoToConceptMap.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnGoToConceptMap;
+                @GoToConceptMap.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnGoToConceptMap;
             }
             m_Wrapper.m_TouchActionsCallbackInterface = instance;
             if (instance != null)
@@ -238,6 +363,21 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 @GlossaryOpenClose.started += instance.OnGlossaryOpenClose;
                 @GlossaryOpenClose.performed += instance.OnGlossaryOpenClose;
                 @GlossaryOpenClose.canceled += instance.OnGlossaryOpenClose;
+                @PopOutMenu.started += instance.OnPopOutMenu;
+                @PopOutMenu.performed += instance.OnPopOutMenu;
+                @PopOutMenu.canceled += instance.OnPopOutMenu;
+                @ClosePopOut.started += instance.OnClosePopOut;
+                @ClosePopOut.performed += instance.OnClosePopOut;
+                @ClosePopOut.canceled += instance.OnClosePopOut;
+                @GoToLessonOne.started += instance.OnGoToLessonOne;
+                @GoToLessonOne.performed += instance.OnGoToLessonOne;
+                @GoToLessonOne.canceled += instance.OnGoToLessonOne;
+                @GoToLessonTwo.started += instance.OnGoToLessonTwo;
+                @GoToLessonTwo.performed += instance.OnGoToLessonTwo;
+                @GoToLessonTwo.canceled += instance.OnGoToLessonTwo;
+                @GoToConceptMap.started += instance.OnGoToConceptMap;
+                @GoToConceptMap.performed += instance.OnGoToConceptMap;
+                @GoToConceptMap.canceled += instance.OnGoToConceptMap;
             }
         }
     }
@@ -292,5 +432,10 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
         void OnNextPage(InputAction.CallbackContext context);
         void OnBackPage(InputAction.CallbackContext context);
         void OnGlossaryOpenClose(InputAction.CallbackContext context);
+        void OnPopOutMenu(InputAction.CallbackContext context);
+        void OnClosePopOut(InputAction.CallbackContext context);
+        void OnGoToLessonOne(InputAction.CallbackContext context);
+        void OnGoToLessonTwo(InputAction.CallbackContext context);
+        void OnGoToConceptMap(InputAction.CallbackContext context);
     }
 }
