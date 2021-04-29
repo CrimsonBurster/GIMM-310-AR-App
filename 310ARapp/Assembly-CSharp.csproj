@@ -64,8 +64,9 @@
     <Compile Include="Assets\Scripts\quizScripts\Quiz.cs" />
     <Compile Include="Assets\Scripts\mainLessonScripts\next_backButtonManager.cs" />
     <Compile Include="Assets\Scripts\arScripts\plantObjectMoves.cs" />
-    <Compile Include="Assets\Scripts\arScripts\plantTransformer.cs" />
     <Compile Include="Assets\Scripts\quizScripts\quizSectionInputs.cs" />
+    <Compile Include="Assets\Scripts\arScripts\plantTransformer.cs" />
+    <Compile Include="Assets\Scripts\mainLessonScripts\menuPanelMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
