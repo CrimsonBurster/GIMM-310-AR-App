@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - GlossaryTermCheck
+    - Quiz
     - inputManager
     - next_backButtonManager
     - plantObjectMoves
@@ -51,12 +52,13 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
+    - UnityEngine.UI.ToggleGroup
   sceneClasses:
     Assets/Scenes/MainLesson.unity:
     - Class: 1
@@ -80,27 +82,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1508}
+      Script: {instanceID: 1506}
     - Class: 114
-      Script: {instanceID: 1512}
+      Script: {instanceID: 1510}
     - Class: 114
-      Script: {instanceID: 1968}
+      Script: {instanceID: 1966}
     - Class: 114
-      Script: {instanceID: 2116}
+      Script: {instanceID: 2114}
     - Class: 114
-      Script: {instanceID: 2494}
+      Script: {instanceID: 2492}
     - Class: 114
-      Script: {instanceID: 2624}
+      Script: {instanceID: 2622}
     - Class: 114
-      Script: {instanceID: 2802}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 3066}
+      Script: {instanceID: 3064}
     - Class: 114
-      Script: {instanceID: 3150}
+      Script: {instanceID: 3148}
     - Class: 114
-      Script: {instanceID: 3454}
+      Script: {instanceID: 3452}
     - Class: 114
-      Script: {instanceID: 3888}
+      Script: {instanceID: 3886}
     - Class: 114
       Script: {instanceID: 4086}
     - Class: 114
@@ -143,15 +145,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2116}
+      Script: {instanceID: 1506}
     - Class: 114
-      Script: {instanceID: 2494}
+      Script: {instanceID: 1510}
     - Class: 114
-      Script: {instanceID: 2624}
+      Script: {instanceID: 1632}
     - Class: 114
-      Script: {instanceID: 2802}
+      Script: {instanceID: 2114}
     - Class: 114
-      Script: {instanceID: 3028}
+      Script: {instanceID: 2492}
+    - Class: 114
+      Script: {instanceID: 2622}
+    - Class: 114
+      Script: {instanceID: 2800}
+    - Class: 114
+      Script: {instanceID: 3064}
+    - Class: 114
+      Script: {instanceID: 3128}
+    - Class: 114
+      Script: {instanceID: 3148}
+    - Class: 114
+      Script: {instanceID: 3452}
+    - Class: 114
+      Script: {instanceID: 3886}
+    - Class: 114
+      Script: {instanceID: 3900}
+    - Class: 114
+      Script: {instanceID: 4230}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -159,6 +179,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -202,39 +224,39 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1508}
+      Script: {instanceID: 1506}
     - Class: 114
-      Script: {instanceID: 1512}
+      Script: {instanceID: 1510}
     - Class: 114
-      Script: {instanceID: 1620}
+      Script: {instanceID: 1618}
     - Class: 114
-      Script: {instanceID: 1698}
+      Script: {instanceID: 1696}
     - Class: 114
-      Script: {instanceID: 2116}
+      Script: {instanceID: 2114}
     - Class: 114
-      Script: {instanceID: 2494}
+      Script: {instanceID: 2492}
     - Class: 114
-      Script: {instanceID: 2530}
+      Script: {instanceID: 2528}
     - Class: 114
-      Script: {instanceID: 2624}
+      Script: {instanceID: 2622}
     - Class: 114
-      Script: {instanceID: 2802}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 3066}
+      Script: {instanceID: 3064}
     - Class: 114
-      Script: {instanceID: 3144}
+      Script: {instanceID: 3142}
     - Class: 114
-      Script: {instanceID: 3150}
+      Script: {instanceID: 3148}
     - Class: 114
-      Script: {instanceID: 3350}
+      Script: {instanceID: 3348}
     - Class: 114
-      Script: {instanceID: 3360}
+      Script: {instanceID: 3358}
     - Class: 114
-      Script: {instanceID: 3454}
+      Script: {instanceID: 3452}
     - Class: 114
-      Script: {instanceID: 3878}
+      Script: {instanceID: 3876}
     - Class: 114
-      Script: {instanceID: 3888}
+      Script: {instanceID: 3886}
     - Class: 114
       Script: {instanceID: 4168}
     - Class: 114
@@ -242,7 +264,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4774}
     - Class: 114
-      Script: {instanceID: 5100}
+      Script: {instanceID: 5102}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1012,6 +1034,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARBackgroundRendererFeature
+  - hash:
+      serializedVersion: 2
+      Hash: 5873843b60d420dbe43ea37370615b2b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Quiz
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
