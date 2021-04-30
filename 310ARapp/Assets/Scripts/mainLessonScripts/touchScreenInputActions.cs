@@ -87,7 +87,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e6a70349-04fe-493f-ae49-b2af4a2caad2"",
-                    ""path"": ""<Touchscreen>/primaryTouch/tap"",
+                    ""path"": ""<Keyboard>/#(A)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -98,7 +98,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""c71a3f28-e7b8-4e62-82fd-e31108fcaf5a"",
-                    ""path"": ""<Touchscreen>/touch2/tap"",
+                    ""path"": ""<Keyboard>/#(B)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -109,7 +109,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""93def623-d147-490e-8a28-cc8529bfde80"",
-                    ""path"": ""<Touchscreen>/touch3/tap"",
+                    ""path"": ""<Keyboard>/#(C)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -120,7 +120,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""9ca11137-2563-4f41-a9e4-dd4e01410647"",
-                    ""path"": ""<Touchscreen>/touch4/tap"",
+                    ""path"": ""<Keyboard>/#(D)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -131,7 +131,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5833c23e-fbb9-4bb5-91a9-04a8244f5405"",
-                    ""path"": ""<Touchscreen>/touch5/tap"",
+                    ""path"": ""<Keyboard>/#(E)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -142,7 +142,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4a5d8b49-e372-45a7-aed5-b5d57b7d7812"",
-                    ""path"": ""<Touchscreen>/touch6/tap"",
+                    ""path"": ""<Keyboard>/#(F)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -153,7 +153,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a24aca96-46db-4ab1-ab79-6b0452cc9673"",
-                    ""path"": ""<Touchscreen>/touch7/tap"",
+                    ""path"": ""<Keyboard>/#(G)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -164,7 +164,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""90edbb45-3a2a-44f4-a563-3eaaa9c42de5"",
-                    ""path"": ""<Touchscreen>/touch8/tap"",
+                    ""path"": ""<Keyboard>/#(H)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
