@@ -2132,7 +2132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <Touchscreen>/touch3/tap
+  m_ControlPath: <Keyboard>/c
 --- !u!114 &740353802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2808,7 +2808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <Touchscreen>/touch6/tap
+  m_ControlPath: <Keyboard>/f
 --- !u!1 &923635952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3281,8 +3281,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 360, y: 540.04504}
-  m_SizeDelta: {x: 1440, y: 2265.9116}
+  m_AnchoredPosition: {x: 360, y: 527.369}
+  m_SizeDelta: {x: 1440, y: 2316.2612}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1026604026
 MonoBehaviour:
@@ -3996,7 +3996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <Touchscreen>/touch0/tap
+  m_ControlPath: <Keyboard>/i
 --- !u!114 &1186387576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4726,7 +4726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <Touchscreen>/touch4/tap
+  m_ControlPath: <Keyboard>/d
 --- !u!114 &1356038046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5049,7 +5049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <Touchscreen>/touch5/tap
+  m_ControlPath: <Keyboard>/e
 --- !u!1 &1488171889
 GameObject:
   m_ObjectHideFlags: 0
@@ -5365,7 +5365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <Touchscreen>/touch8/tap
+  m_ControlPath: <Keyboard>/h
 --- !u!1 &1612869162
 GameObject:
   m_ObjectHideFlags: 0
@@ -5499,7 +5499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <Touchscreen>/primaryTouch/tap
+  m_ControlPath: <Keyboard>/a
 --- !u!1 &1688180996
 GameObject:
   m_ObjectHideFlags: 0
@@ -5774,7 +5774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <Touchscreen>/touch2/tap
+  m_ControlPath: <Keyboard>/b
 --- !u!1 &1761642684
 GameObject:
   m_ObjectHideFlags: 0
@@ -6589,7 +6589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <Touchscreen>/touch7/tap
+  m_ControlPath: <Keyboard>/g
 --- !u!1 &2031035366
 GameObject:
   m_ObjectHideFlags: 0

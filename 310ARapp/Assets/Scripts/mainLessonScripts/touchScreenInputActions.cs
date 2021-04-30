@@ -183,7 +183,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""62abfaba-4bce-4452-b9f7-11cc1b34ada4"",
-                    ""path"": ""<Touchscreen>/touch0/tap"",
+                    ""path"": ""<Keyboard>/i"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

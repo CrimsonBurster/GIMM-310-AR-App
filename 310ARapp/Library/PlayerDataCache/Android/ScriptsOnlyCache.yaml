@@ -8,12 +8,8 @@ ScriptsOnlyBuild:
     - plantObjectMoves
     - plantTransformer
     - textFadeOut
-    Unity.CollabProxy.Editor.dll:
-    - Unity.Cloud.Collaborate.UserInterface.CollaborateWindow
-    - Unity.Cloud.Collaborate.UserInterface.WindowCache
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.Editor.InputActionEditorWindow
-    - UnityEngine.InputSystem.Editor.InputDebuggerWindow
     - UnityEngine.InputSystem.EnhancedTouch.TouchSimulation
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
@@ -41,12 +37,6 @@ ScriptsOnlyBuild:
     Unity.XR.Management.dll:
     - UnityEngine.XR.Management.XRGeneralSettings
     - UnityEngine.XR.Management.XRManagerSettings
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -90,41 +80,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1538}
+      Script: {instanceID: 1514}
     - Class: 114
-      Script: {instanceID: 1542}
+      Script: {instanceID: 1518}
     - Class: 114
-      Script: {instanceID: 1998}
+      Script: {instanceID: 1974}
     - Class: 114
-      Script: {instanceID: 2146}
+      Script: {instanceID: 2122}
     - Class: 114
-      Script: {instanceID: 2524}
+      Script: {instanceID: 2500}
     - Class: 114
-      Script: {instanceID: 2654}
+      Script: {instanceID: 2630}
     - Class: 114
-      Script: {instanceID: 2832}
+      Script: {instanceID: 2808}
     - Class: 114
-<<<<<<< Updated upstream
-      Script: {instanceID: 2888}
-=======
-      Script: {instanceID: 2856}
+      Script: {instanceID: 2864}
     - Class: 114
-      Script: {instanceID: 2856}
+      Script: {instanceID: 3072}
     - Class: 114
-      Script: {instanceID: 3064}
->>>>>>> Stashed changes
+      Script: {instanceID: 3156}
     - Class: 114
-      Script: {instanceID: 3096}
+      Script: {instanceID: 3460}
     - Class: 114
-      Script: {instanceID: 3180}
+      Script: {instanceID: 3894}
     - Class: 114
-      Script: {instanceID: 3484}
+      Script: {instanceID: 4094}
     - Class: 114
-      Script: {instanceID: 3918}
-    - Class: 114
-      Script: {instanceID: 4118}
-    - Class: 114
-      Script: {instanceID: 4262}
+      Script: {instanceID: 4238}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -163,33 +145,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1538}
+      Script: {instanceID: 1514}
     - Class: 114
-      Script: {instanceID: 1542}
+      Script: {instanceID: 1518}
     - Class: 114
-      Script: {instanceID: 1664}
+      Script: {instanceID: 1640}
     - Class: 114
-      Script: {instanceID: 2146}
+      Script: {instanceID: 2122}
     - Class: 114
-      Script: {instanceID: 2524}
+      Script: {instanceID: 2500}
     - Class: 114
-      Script: {instanceID: 2654}
+      Script: {instanceID: 2630}
     - Class: 114
-      Script: {instanceID: 2832}
+      Script: {instanceID: 2808}
     - Class: 114
-      Script: {instanceID: 3096}
+      Script: {instanceID: 3072}
     - Class: 114
-      Script: {instanceID: 3160}
+      Script: {instanceID: 3136}
     - Class: 114
-      Script: {instanceID: 3180}
+      Script: {instanceID: 3156}
     - Class: 114
-      Script: {instanceID: 3484}
+      Script: {instanceID: 3460}
     - Class: 114
-      Script: {instanceID: 3918}
+      Script: {instanceID: 3894}
     - Class: 114
-      Script: {instanceID: 3932}
+      Script: {instanceID: 3908}
     - Class: 114
-      Script: {instanceID: 4262}
+      Script: {instanceID: 4238}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -242,59 +224,47 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1538}
+      Script: {instanceID: 1514}
     - Class: 114
-      Script: {instanceID: 1542}
+      Script: {instanceID: 1518}
     - Class: 114
-      Script: {instanceID: 1650}
+      Script: {instanceID: 1626}
     - Class: 114
-      Script: {instanceID: 1728}
+      Script: {instanceID: 1704}
     - Class: 114
-      Script: {instanceID: 2146}
+      Script: {instanceID: 2122}
     - Class: 114
-      Script: {instanceID: 2524}
+      Script: {instanceID: 2500}
     - Class: 114
-      Script: {instanceID: 2560}
+      Script: {instanceID: 2536}
     - Class: 114
-      Script: {instanceID: 2654}
+      Script: {instanceID: 2630}
     - Class: 114
-      Script: {instanceID: 2832}
+      Script: {instanceID: 2808}
     - Class: 114
-      Script: {instanceID: 3096}
+      Script: {instanceID: 3072}
     - Class: 114
-      Script: {instanceID: 3174}
+      Script: {instanceID: 3150}
     - Class: 114
-      Script: {instanceID: 3180}
+      Script: {instanceID: 3156}
     - Class: 114
-      Script: {instanceID: 3380}
+      Script: {instanceID: 3356}
     - Class: 114
-      Script: {instanceID: 3390}
+      Script: {instanceID: 3366}
     - Class: 114
-      Script: {instanceID: 3484}
+      Script: {instanceID: 3460}
     - Class: 114
-      Script: {instanceID: 3908}
+      Script: {instanceID: 3884}
     - Class: 114
-      Script: {instanceID: 3918}
+      Script: {instanceID: 3894}
     - Class: 114
-      Script: {instanceID: 4200}
+      Script: {instanceID: 4176}
     - Class: 114
-      Script: {instanceID: 4262}
+      Script: {instanceID: 4238}
     - Class: 114
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      Script: {instanceID: 4808}
+      Script: {instanceID: 4784}
     - Class: 114
-      Script: {instanceID: 5136}
-=======
-      Script: {instanceID: 4776}
-    - Class: 114
-      Script: {instanceID: 5104}
->>>>>>> Stashed changes
-=======
-      Script: {instanceID: 4776}
-    - Class: 114
-      Script: {instanceID: 5104}
->>>>>>> Stashed changes
+      Script: {instanceID: 5112}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1120,15 +1090,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      Hash: c5d270e0e2ef95e49809e06f3133695e
-=======
       Hash: 3244829731a69fa7d6fa1c06dd2c906e
->>>>>>> Stashed changes
-=======
-      Hash: 3244829731a69fa7d6fa1c06dd2c906e
->>>>>>> Stashed changes
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: next_backButtonManager
@@ -1449,4 +1411,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainLesson.unity
   - Assets/Scenes/arSequence.unity
   - Assets/Scenes/Quiz.unity
-  playerPath: C:/Users/wingl/Documents/GitHub/GIMM-310-AR-App/310ARapp/masterTest.apk
+  playerPath: C:/Users/wingl/Documents/GitHub/GIMM-310-AR-App/310ARapp/arTest.apk

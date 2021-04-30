@@ -13,15 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      ticks: 637553383784337843
-=======
-      ticks: 637553209858910115
->>>>>>> Stashed changes
-=======
-      ticks: 637553209858910115
->>>>>>> Stashed changes
+      ticks: 637553392852836061
     m_Hash: 3587019023
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
