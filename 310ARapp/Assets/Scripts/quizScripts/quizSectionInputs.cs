@@ -31,7 +31,7 @@ public class @QuizSectionInputs : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""0ef436f2-f257-4f72-8776-061ffa0e506c"",
-                    ""path"": ""<Touchscreen>/primaryTouch/tap"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

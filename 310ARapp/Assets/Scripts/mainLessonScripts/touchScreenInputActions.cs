@@ -81,13 +81,21 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""StartArLesson"",
+                    ""type"": ""Button"",
+                    ""id"": ""54adbfa5-c147-4dae-b8ac-3d1654118e66"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""e6a70349-04fe-493f-ae49-b2af4a2caad2"",
-                    ""path"": ""<Touchscreen>/primaryTouch/tap"",
+                    ""path"": ""<Keyboard>/#(A)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -98,7 +106,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""c71a3f28-e7b8-4e62-82fd-e31108fcaf5a"",
-                    ""path"": ""<Touchscreen>/touch2/tap"",
+                    ""path"": ""<Keyboard>/#(B)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -109,7 +117,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""93def623-d147-490e-8a28-cc8529bfde80"",
-                    ""path"": ""<Touchscreen>/touch3/tap"",
+                    ""path"": ""<Keyboard>/#(C)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -120,7 +128,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""9ca11137-2563-4f41-a9e4-dd4e01410647"",
-                    ""path"": ""<Touchscreen>/touch4/tap"",
+                    ""path"": ""<Keyboard>/#(D)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -131,7 +139,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5833c23e-fbb9-4bb5-91a9-04a8244f5405"",
-                    ""path"": ""<Touchscreen>/touch5/tap"",
+                    ""path"": ""<Keyboard>/#(E)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -142,7 +150,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4a5d8b49-e372-45a7-aed5-b5d57b7d7812"",
-                    ""path"": ""<Touchscreen>/touch6/tap"",
+                    ""path"": ""<Keyboard>/#(F)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -153,7 +161,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a24aca96-46db-4ab1-ab79-6b0452cc9673"",
-                    ""path"": ""<Touchscreen>/touch7/tap"",
+                    ""path"": ""<Keyboard>/#(G)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -164,11 +172,22 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""90edbb45-3a2a-44f4-a563-3eaaa9c42de5"",
-                    ""path"": ""<Touchscreen>/touch8/tap"",
+                    ""path"": ""<Keyboard>/#(H)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""GoToConceptMap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""62abfaba-4bce-4452-b9f7-11cc1b34ada4"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StartArLesson"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -248,6 +267,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
         m_Touch_GoToLessonOne = m_Touch.FindAction("GoToLessonOne", throwIfNotFound: true);
         m_Touch_GoToLessonTwo = m_Touch.FindAction("GoToLessonTwo", throwIfNotFound: true);
         m_Touch_GoToConceptMap = m_Touch.FindAction("GoToConceptMap", throwIfNotFound: true);
+        m_Touch_StartArLesson = m_Touch.FindAction("StartArLesson", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -305,6 +325,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Touch_GoToLessonOne;
     private readonly InputAction m_Touch_GoToLessonTwo;
     private readonly InputAction m_Touch_GoToConceptMap;
+    private readonly InputAction m_Touch_StartArLesson;
     public struct TouchActions
     {
         private @TouchScreenInputActions m_Wrapper;
@@ -317,6 +338,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
         public InputAction @GoToLessonOne => m_Wrapper.m_Touch_GoToLessonOne;
         public InputAction @GoToLessonTwo => m_Wrapper.m_Touch_GoToLessonTwo;
         public InputAction @GoToConceptMap => m_Wrapper.m_Touch_GoToConceptMap;
+        public InputAction @StartArLesson => m_Wrapper.m_Touch_StartArLesson;
         public InputActionMap Get() { return m_Wrapper.m_Touch; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -350,6 +372,9 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 @GoToConceptMap.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnGoToConceptMap;
                 @GoToConceptMap.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnGoToConceptMap;
                 @GoToConceptMap.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnGoToConceptMap;
+                @StartArLesson.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnStartArLesson;
+                @StartArLesson.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnStartArLesson;
+                @StartArLesson.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnStartArLesson;
             }
             m_Wrapper.m_TouchActionsCallbackInterface = instance;
             if (instance != null)
@@ -378,6 +403,9 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 @GoToConceptMap.started += instance.OnGoToConceptMap;
                 @GoToConceptMap.performed += instance.OnGoToConceptMap;
                 @GoToConceptMap.canceled += instance.OnGoToConceptMap;
+                @StartArLesson.started += instance.OnStartArLesson;
+                @StartArLesson.performed += instance.OnStartArLesson;
+                @StartArLesson.canceled += instance.OnStartArLesson;
             }
         }
     }
@@ -437,5 +465,6 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
         void OnGoToLessonOne(InputAction.CallbackContext context);
         void OnGoToLessonTwo(InputAction.CallbackContext context);
         void OnGoToConceptMap(InputAction.CallbackContext context);
+        void OnStartArLesson(InputAction.CallbackContext context);
     }
 }

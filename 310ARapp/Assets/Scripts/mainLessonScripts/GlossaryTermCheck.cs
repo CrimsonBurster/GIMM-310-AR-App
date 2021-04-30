@@ -17,31 +17,31 @@ public class GlossaryTermCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(number == 1)
-        {
-            term1.gameObject.SetActive(true);
-        }
-
-        else if(number == 2)
-        {
-            term1.gameObject.SetActive(true);
-            term2.gameObject.SetActive(true);
-        }
-
-        else if(number == 3)
-        {
-            term1.gameObject.SetActive(true);
-            term2.gameObject.SetActive(true);
-            term3.gameObject.SetActive(true);
-        }
-
-        else if(number == 4)
+        if(number >= 24)
         {
             term1.gameObject.SetActive(true);
             term2.gameObject.SetActive(true);
             term3.gameObject.SetActive(true);
             term4.gameObject.SetActive(true);
             term5.gameObject.SetActive(true);
+        }
+
+        else if (number >= 17)
+        {
+            term1.gameObject.SetActive(true);
+            term2.gameObject.SetActive(true);
+            term3.gameObject.SetActive(true);
+        }
+
+        else if (number >= 10)
+        {
+            term1.gameObject.SetActive(true);
+            term2.gameObject.SetActive(true);
+        }
+
+        if (number >= 3)
+        {
+            term1.gameObject.SetActive(true);
         }
     }
 
