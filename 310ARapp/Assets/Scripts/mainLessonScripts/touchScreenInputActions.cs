@@ -81,6 +81,14 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""StartArLesson"",
+                    ""type"": ""Button"",
+                    ""id"": ""54adbfa5-c147-4dae-b8ac-3d1654118e66"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -171,6 +179,17 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                     ""action"": ""GoToConceptMap"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""62abfaba-4bce-4452-b9f7-11cc1b34ada4"",
+                    ""path"": ""<Touchscreen>/touch0/tap"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StartArLesson"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -248,6 +267,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
         m_Touch_GoToLessonOne = m_Touch.FindAction("GoToLessonOne", throwIfNotFound: true);
         m_Touch_GoToLessonTwo = m_Touch.FindAction("GoToLessonTwo", throwIfNotFound: true);
         m_Touch_GoToConceptMap = m_Touch.FindAction("GoToConceptMap", throwIfNotFound: true);
+        m_Touch_StartArLesson = m_Touch.FindAction("StartArLesson", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -305,6 +325,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Touch_GoToLessonOne;
     private readonly InputAction m_Touch_GoToLessonTwo;
     private readonly InputAction m_Touch_GoToConceptMap;
+    private readonly InputAction m_Touch_StartArLesson;
     public struct TouchActions
     {
         private @TouchScreenInputActions m_Wrapper;
@@ -317,6 +338,7 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
         public InputAction @GoToLessonOne => m_Wrapper.m_Touch_GoToLessonOne;
         public InputAction @GoToLessonTwo => m_Wrapper.m_Touch_GoToLessonTwo;
         public InputAction @GoToConceptMap => m_Wrapper.m_Touch_GoToConceptMap;
+        public InputAction @StartArLesson => m_Wrapper.m_Touch_StartArLesson;
         public InputActionMap Get() { return m_Wrapper.m_Touch; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -350,6 +372,9 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 @GoToConceptMap.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnGoToConceptMap;
                 @GoToConceptMap.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnGoToConceptMap;
                 @GoToConceptMap.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnGoToConceptMap;
+                @StartArLesson.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnStartArLesson;
+                @StartArLesson.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnStartArLesson;
+                @StartArLesson.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnStartArLesson;
             }
             m_Wrapper.m_TouchActionsCallbackInterface = instance;
             if (instance != null)
@@ -378,6 +403,9 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
                 @GoToConceptMap.started += instance.OnGoToConceptMap;
                 @GoToConceptMap.performed += instance.OnGoToConceptMap;
                 @GoToConceptMap.canceled += instance.OnGoToConceptMap;
+                @StartArLesson.started += instance.OnStartArLesson;
+                @StartArLesson.performed += instance.OnStartArLesson;
+                @StartArLesson.canceled += instance.OnStartArLesson;
             }
         }
     }
@@ -437,5 +465,6 @@ public class @TouchScreenInputActions : IInputActionCollection, IDisposable
         void OnGoToLessonOne(InputAction.CallbackContext context);
         void OnGoToLessonTwo(InputAction.CallbackContext context);
         void OnGoToConceptMap(InputAction.CallbackContext context);
+        void OnStartArLesson(InputAction.CallbackContext context);
     }
 }

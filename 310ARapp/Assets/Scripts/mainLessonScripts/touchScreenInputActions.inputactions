@@ -68,6 +68,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "StartArLesson",
+                    "type": "Button",
+                    "id": "54adbfa5-c147-4dae-b8ac-3d1654118e66",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -156,6 +164,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "GoToConceptMap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "62abfaba-4bce-4452-b9f7-11cc1b34ada4",
+                    "path": "<Touchscreen>/touch0/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartArLesson",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
